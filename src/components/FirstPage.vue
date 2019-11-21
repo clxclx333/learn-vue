@@ -39,6 +39,9 @@
       <h3>v-bind语句绑定数据</h3>
       <button :title='mytitle'>按钮1</button>
       <br>
+      <div>
+        <a :href="url" target="_blank">百度一下</a>
+      </div>
       <div v-bind:class="{ active: isActive }"></div>
     </el-card>
     <!--<input type="button" value="按钮">-->
@@ -46,7 +49,8 @@
     <!--<button v-on:click="show">按钮2</button>    v-on简写为@   -->
     <el-card class="box-card">
       <h3>v-on语句绑定事件</h3>
-      <button @click="show">按钮2</button>
+      <input v-model="inputStr" />
+      <button  @click="show">搜索</button>
     </el-card>
 
     <el-card class="box-card">
@@ -77,6 +81,8 @@
         isActive: true,
         message1: 'abcdef',
         message2: '',
+        url: '//www.baidu.com',
+        inputStr: '',
       sites: [
         {name: 's'},
         {name: 'm'},
@@ -86,7 +92,7 @@
     },
     methods: {
       show() {
-        alert('hello');
+        window.location.href = 'https://www.baidu.com/s?ie=utf-8&f=8&rsv_bp=1&tn=monline_4_dg&wd=' + this.inputStr;
       }
     }
   };
