@@ -1,5 +1,5 @@
 <template>
-  <div class="hello">
+  <div class="hello" style="margin-left: 30%; margin-right: 30%" >
     <el-form :model="ruleForm" status-icon :rules="rules" ref="ruleForm" label-width="100px" class="demo-ruleForm">
       <el-form-item label="用户名" prop="username">
         <el-input v-model.number="ruleForm.username"></el-input>
@@ -92,6 +92,9 @@
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped lang="less">
+  .hello {
+    text-align: center;
+  }
   h3 {
     margin: 40px 0 0;
   }

@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div class="select">
     <el-tabs v-model="activeName" @tab-click="handleClick">
       <el-tab-pane label="第一页" name="first">
         <FirstPage></FirstPage>
@@ -36,5 +36,8 @@
 </script>
 
 <style scoped>
-
+  .select{
+    margin-left: 30%;
+    margin-right:30%;
+  }
 </style>
