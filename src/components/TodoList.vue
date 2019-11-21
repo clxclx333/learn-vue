@@ -1,6 +1,8 @@
 <template>
   <div class="todo-list">
-    <input v-model="childInfo" @keyup.enter="pushStore"> </input>
+    <input v-model="childInfo" @keyup.enter="pushStore"/>
+    <br>
+    {{ childInfo }}
     <div>
       <ul>
         <li v-for="(item,index) in infoSource" :key="index" @click="changeToOpposite(item)">

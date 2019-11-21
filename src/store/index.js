@@ -15,6 +15,9 @@ export default new Vuex.Store(
         console.log(data);
         state.list = data;
       },
+      login(state, data) {
+        state.loginState = data.loginState;
+      },
       pushList(state, payload) {
         this.state.list.push({
           todo: payload,
