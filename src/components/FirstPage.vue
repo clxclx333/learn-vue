@@ -26,7 +26,8 @@
     <el-card class="box-card">
       <h3>v-for</h3>
       <ul>
-        <li v-for="site in sites" :key="site">
+        <li v-for="site in sites" :key="site.name"> //只写site会报错，key不能绑对象
+
           <input type="checkbox">
           {{ site.name }}
         </li>
